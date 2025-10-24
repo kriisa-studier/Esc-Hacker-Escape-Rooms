@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Roboto";
+  margin: 0;
+  font-size: 18px;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  padding: 10px;
+  margin: 0;
+  column-gap: 12px;
+  background-color: #021928;
+  color: white;
+  display: flex;
+}
+.header img {
+  width: 128px;
+  height: 82px;
+  background-position: center;
+}
+.header .company-name {
+  font-weight: 700;
+  font-size: 22px;
+  width: 110px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .header .company-name {
+    padding-top: 36px;
+    flex-direction: center;
+    width: 500px;
+    font-size: 40px;
+    margin-left: 25px;
+  }
+}
+
+.navigation-bar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navigation-bar {
+    display: block;
+    background-color: #021928;
+  }
+  .navigation-menu {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .navigation-menu .user {
+    position: relative;
+  }
+  .navigation-menu .user-icon {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+    box-shadow: inset solid solid 2px #363535;
+  }
+  .navigation-menu .user-name {
+    position: absolute;
+    left: 50px;
+    top: 0%;
+    transform: translateY(-50%);
+    background: #363535;
+    color: #f2f2f2;
+    border-radius: 25px 25px 25px 0;
+    opacity: 0;
+    padding: 10px;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    box-shadow: inset 0px 0.5px 0.5px #999;
+  }
+  .navigation-menu :hover .user-name {
+    transform: translate(10px, -50%);
+    opacity: 1;
+  }
+  .navigation-menu li {
+    list-style-type: none;
+  }
+  .navigation-menu li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+.button.primary {
+  background-color: #8ACFE5;
+  width: 308px;
+  height: 66px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  border: transparent;
+  font-weight: bold;
+}
+
+.button.secondary {
+  background-color: transparent;
+  color: #36769D;
+  text-decoration: underline;
+  border: transparent;
+}
+
+@media (min-width: 768px) {
+  .button.primary {
+    font-size: 24px;
+    color: black;
+    background-color: #8ACFE5;
+    padding: 10px 20px;
+    width: 308px;
+    height: 66px;
+    border-radius: 6px;
+    font-family: "Roboto";
+    text-decoration: none;
+    border: transparent;
+    font-weight: bold;
+  }
+  .button.secondary {
+    font-size: 24px;
+    color: white;
+    background-color: #E3170A;
+    padding: 10px 20px;
+    width: 308px;
+    height: 66px;
+    border-radius: 6px;
+    font-family: "Roboto";
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+.main-image-and-buttons-section img {
+  width: 100%;
+  object-fit: cover;
+}
+.main-image-and-buttons-section .button-challenges {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .main-image-and-buttons-section .button-challenges {
+    top: -40px;
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+.review-item:not(:first-child) {
+  display: none;
+}
+
+.review-item {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+}
+.review-item figure {
+  display: grid;
+  grid-template-columns: 80px auto;
+  column-gap: 16px;
+}
+.review-item figure .review-quote {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-style: italic;
+}
+.review-item figure .reviewer {
+  grid-column: 2/3;
+  margin-left: 40px;
+  font-size: medium;
+}
+
+@media (min-width: 1024px) {
+  .reviews {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .review-item:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.popular-challenges {
+  display: block;
+  background-color: white;
+  box-sizing: border-box;
+}
+.popular-challenges .popular-challenge-elements {
+  display: flex;
+}
+.popular-challenges .popular-challenges-title {
+  display: block;
+  text-align: center;
+  font-size: 36px;
+  padding: 48px;
+}
+.popular-challenges .challenges {
+  flex-basis: 0;
+  flex-grow: 1;
+  display: flex;
+}
+.popular-challenges .challenges .challenge {
+  flex: 33%;
+  height: 340px;
+  width: 320px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin: 5px;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.popular-challenges .challenges .challenge .challenge-image {
+  height: 50%;
+  background-image: url("../../img/hero.png");
+  background-size: cover;
+}
+.popular-challenges .challenges .challenge .challenge-content {
+  height: 50%;
+  font-size: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.popular-challenges .challenges .challenge .challenge-content .challenge-name {
+  font-size: 16px;
+}
+.popular-challenges .challenges .challenge .challenge-content .challenge-review-participants {
+  display: flex;
+  justify-content: space-between;
+}
+.popular-challenges .challenges .challenge .challenge-content .challenge-info {
+  padding: 8px 0;
+}
+.popular-challenges .challenges .challenge .challenge-content .book-challenge {
+  display: flex;
+}
+.popular-challenges .challenges .challenge .challenge-content .book-challenge .button {
+  background: #E3170A;
+  color: white;
+  font-size: 16px;
+  padding: 8px 16px;
+  font-style: bold;
+  border: transparent;
+  border-radius: 4px;
+}
+
+.button-challenges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  gap: 20px;
+  margin: 50px;
+}
+.button-challenges .button-onsite {
+  background-color: transparent;
+  color: #36769D;
+  text-decoration: underline;
+  border: transparent;
+}
+.button-challenges .button-online {
+  background-color: #8ACFE5;
+  width: 308px;
+  height: 66px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  border: transparent;
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .button-challenges {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .button-challenges .button-onsite {
+    font-size: 24px;
+    color: white;
+    background-color: #E3170A;
+    padding: 10px 20px;
+    width: 308px;
+    height: 66px;
+    border-radius: 6px;
+    font-family: "Roboto";
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .button-challenges .button-online {
+    font-size: 24px;
+    color: black;
+    background-color: #8ACFE5;
+    padding: 10px 20px;
+    width: 308px;
+    height: 66px;
+    border-radius: 6px;
+    font-family: "Roboto";
+    text-decoration: none;
+    border: transparent;
+    font-weight: bold;
+  }
+}
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #021928;
+  color: white;
+  padding: 96px 20px;
+}
+.story .story-text {
+  font-family: "Roboto";
+  text-align: center;
+}
+.story .button-story {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 24px;
+  color: #8ACFE5;
+  background-color: transparent;
+  border: 2px solid #8ACFE5;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: "Roboto";
+  text-decoration: none;
+}
+
+.booking {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+}
+.booking .booking-info {
+  padding: 30px 20px 32px;
+  display: flex;
+  flex-direction: column;
+}
+.booking .booking-info .booking-title {
+  font-size: 32px;
+}
+.booking .booking-info .booking-content {
+  font-size: 24px;
+}
+.booking .booking-info .button {
+  font-size: 24px;
+  color: black;
+  background-color: #8ACFE5;
+  padding: 10px 20px;
+  width: 308px;
+  height: 66px;
+  border-radius: 6px;
+  font-family: "Roboto";
+  text-decoration: none;
+  border: transparent;
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .booking {
+    flex-direction: row;
+  }
+  .booking .booking-info {
+    flex: 40%;
+    padding: 5%;
+  }
+  .booking .booking-image {
+    flex: 50%;
+  }
+  .booking:last-child {
+    flex-direction: row-reverse;
+  }
+}
+.footer * {
+  flex: 33%;
+}
+.footer {
+  background-color: #021928;
+  color: white;
+  display: flex;
+  padding: 140px 120px;
+}
+.footer .about {
+  margin: 10px;
+  flex: 50;
+}
+.footer .about h2 {
+  font-size: 16px;
+  margin-top: 0px;
+}
+.footer .about p {
+  font-size: 14px;
+}
+.footer .sitemap, .footer .follow-us {
+  list-style-type: none;
+  padding: 0;
+}
+.footer .follow-us {
+  font-size: 14px;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "esc-hacker-escape-rooms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+
+    "watch-sass": "sass --no-source-map --watch src/content.scss style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.93.2"
+  }
+}
