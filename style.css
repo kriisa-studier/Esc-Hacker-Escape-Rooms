@@ -16,7 +16,7 @@ img {
 }
 
 .header {
-  padding: 10px;
+  padding: 12px;
   margin: 0;
   column-gap: 12px;
   background-color: #021928;
@@ -27,6 +27,7 @@ img {
   width: 128px;
   height: 82px;
   background-position: center;
+  margin-left: 8px;
 }
 .header .company-name {
   font-weight: 700;
