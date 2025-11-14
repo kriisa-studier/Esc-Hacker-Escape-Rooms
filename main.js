@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .fullscreen-menu {
             display: none;
         }
-    @media (max-width: 768px){
+    @media (max-width: 840px){
 
         .hamburger-menu {
             position: absolute;
