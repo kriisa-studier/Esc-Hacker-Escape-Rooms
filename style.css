@@ -59,7 +59,7 @@ img {
   
 }
 
-@media (min-width: 768px) {
+@media (min-width: 840px) {
   .main-image-and-buttons-section {
   flex-direction: row-reverse;
 }
@@ -148,7 +148,7 @@ display: flex;
   margin: 1rem 0 3rem;
     margin-top: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 840px) {
   .main-image-and-buttons-section .button-challenges {
     top: -40px;
     display: flex;
