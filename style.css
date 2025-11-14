@@ -2,7 +2,7 @@
 body {
   font-family: "Roboto";
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   width: 100%;
 }
 @media (min-width: 1024px) {
@@ -15,8 +15,13 @@ img {
   width: 100%;
 }
 
+.header-elements {
+  padding: 2rem;
+  background-color: #011827;
+  position: relative;
+}
+
 .header {
-  padding: 12px;
   margin: 0;
   column-gap: 12px;
   background-color: #021928;
@@ -24,23 +29,24 @@ img {
   display: flex;
 }
 .header img {
-  width: 128px;
-  height: 82px;
+  width: 170px;
+  height: 114px;
   background-position: center;
-  margin-left: 8px;
 }
 .header .company-name {
   font-weight: 700;
-  font-size: 22px;
+  font-size: 24px;
   width: 110px;
   margin: 0;
+  padding-top: 0.3rem;
 }
 @media (min-width: 768px) {
   .header .company-name {
-    padding-top: 36px;
+
+    padding-top: 64px;
     flex-direction: center;
     width: 500px;
-    font-size: 40px;
+    font-size: 42px;
     margin-left: 25px;
   }
 }
@@ -49,57 +55,34 @@ img {
   display: none;
 }
 
+.main-image-and-buttons-section {
+  
+}
+
 @media (min-width: 768px) {
+  .main-image-and-buttons-section {
+  flex-direction: row-reverse;
+}
   .navigation-bar {
     display: block;
     background-color: #021928;
   }
   .navigation-menu {
-    margin: 0;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .navigation-menu .user {
-    position: relative;
-  }
-  .navigation-menu .user-icon {
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
+display: flex;
+    gap: 1rem;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: white;
-    font-weight: bold;
-    font-size: 24px;
-    color: black;
-    box-shadow: inset solid solid 2px #363535;
+    margin: 3rem 0 0;
+    padding: 0;
   }
-  .navigation-menu .user-name {
-    position: absolute;
-    left: 50px;
-    top: 0%;
-    transform: translateY(-50%);
-    background: #363535;
-    color: #f2f2f2;
-    border-radius: 25px 25px 25px 0;
-    opacity: 0;
-    padding: 10px;
-    transition: opacity 0.35s ease, transform 0.35s ease;
-    box-shadow: inset 0px 0.5px 0.5px #999;
-  }
-  .navigation-menu :hover .user-name {
-    transform: translate(10px, -50%);
-    opacity: 1;
-  }
+
   .navigation-menu li {
     list-style-type: none;
+    padding: 0 1rem;
   }
   .navigation-menu li a {
     color: white;
-    font-weight: bold;
     text-decoration: none;
+    font-size: 1.5rem;
   }
 }
 .button.primary {
@@ -111,6 +94,7 @@ img {
   color: black;
   border: transparent;
   font-weight: bold;
+  font-size: 1.6rem;
 }
 
 .button.secondary {
@@ -118,9 +102,12 @@ img {
   color: #36769D;
   text-decoration: underline;
   border: transparent;
+  font-weight: bold;
+  font-size: 1rem;
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: 840px) {
   .button.primary {
     font-size: 24px;
     color: black;
@@ -153,78 +140,176 @@ img {
 }
 .main-image-and-buttons-section .button-challenges {
   position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  margin: 1rem 0 3rem;
+    margin-top: 1rem;
 }
 @media (min-width: 768px) {
   .main-image-and-buttons-section .button-challenges {
     top: -40px;
     display: flex;
     margin: 0;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     gap: 16px;
+
   }
 }
 
-.review-item:not(:first-child) {
+.reviews-list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 840px) {
+  .reviews-list {
+    flex-direction: row;
+  }
+}
+.review-item {
   display: none;
+  margin: 0;
+}
+.review-item:first-of-type {
+  display: block;
+}
+@media screen and (min-width: 840px) {
+  .review-item {
+    display: block;
+  }
 }
 
-.review-item {
-  display: flex;
+.review-image {
+  border-radius: 50%;
+}
+
+.review-figure {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 5rem 2fr;
+  grid-template-rows: auto auto;
+  max-width: 40rem;
+}
+.review-quote {
+  font-size: 1.8rem;
+  font-style: italic;
+  margin: 0;
+}
+.reviewer {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  font-size: 1.2rem;
+}
+.popular-challenges {
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style-type: none;
-}
-.review-item figure {
-  display: grid;
-  grid-template-columns: 80px auto;
-  column-gap: 16px;
-}
-.review-item figure .review-quote {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 40px;
-  margin-right: 40px;
-  font-style: italic;
-}
-.review-item figure .reviewer {
-  grid-column: 2/3;
-  margin-left: 40px;
-  font-size: medium;
 }
 
-@media (min-width: 1024px) {
-  .reviews {
-    flex-basis: 0;
-    flex-grow: 1;
-  }
-  .review-item:not(:first-child) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.popular-challenges {
-  display: block;
-  background-color: white;
-  box-sizing: border-box;
-}
-.popular-challenges .popular-challenge-elements {
-  display: flex;
-}
 .popular-challenges .popular-challenges-title {
-  display: block;
-  text-align: center;
-  font-size: 36px;
-  padding: 48px;
+  font-size: 2rem;
+  font-weight: normal;
 }
-.popular-challenges .challenges {
-  flex-basis: 0;
-  flex-grow: 1;
+
+.popular-challenges-card-list {
+  padding: 0  1rem;
   display: flex;
+  max-width: 100%;
+  overflow-x: scroll;
 }
+
+.popular-challenges .popular-challenges-card .popular-challenges-card-list .popular-challenges-card-list-item {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 840px) {
+  
+}
+
+.challenge {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  max-width: 26rem;
+  min-width: 24rem;
+  overflow: hidden;
+}
+
+.challenge-name {
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin: 1rem 1rem 0.5rem;
+  width: 100%;
+}
+
+.challenge-review-participants {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+.review {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.review-star-filled {
+background-image: url(/star-full.png);
+    list-style-type: none;
+  width: 1rem;
+  height: 1rem;
+    background-size: cover;
+
+}
+
+
+.popular-challenges .popular-challenges-card .popular-challenges-card-list .popular-challenges-card-list-item .challenge .challenge-name .challenge-review-participants .review .review-star {
+background-image: url(/star-empty.png);
+}
+
+.review-star {
+    list-style-type: none;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(/star-empty.png);
+  background-size: cover;
+}
+
+.participants {
+  font-size: 1rem;
+}
+
+.challenge-info {
+    font-size: 1.1rem;
+  margin: 1rem 1rem;
+}
+
+.challenge-button {
+  background-color: #E3170A;
+  border-radius: 0.4rem;
+  border-width: 0;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.8em 2.4em;
+  text-decoration: none;
+  align-self: flex-end;
+  font-size: 1.2rem;
+  margin: 0 1rem 1rem;
+}
+
+
 .popular-challenges .challenges .challenge {
   flex: 33%;
   height: 340px;
@@ -249,7 +334,10 @@ img {
   flex-direction: column;
 }
 .popular-challenges .challenges .challenge .challenge-content .challenge-name {
-  font-size: 16px;
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin: 1rem 1rem 0.5rem;
+  width: 100%;
 }
 .popular-challenges .challenges .challenge .challenge-content .challenge-review-participants {
   display: flex;
@@ -272,13 +360,18 @@ img {
 }
 
 .button-challenges {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: white;
-  gap: 20px;
-  margin: 50px;
+  gap: 2rem;
+  justify-content: center;
+  margin: 1rem 0 3rem;
 }
+
+.button-challenges {
+  flex-direction: column-reverse;
+}
+
 .button-challenges .button-onsite {
   background-color: transparent;
   color: #36769D;
@@ -296,7 +389,7 @@ img {
   font-weight: bold;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 840px) {
   .button-challenges {
     display: flex;
     justify-content: center;
@@ -329,59 +422,61 @@ img {
   }
 }
 .story {
+align-items: center;
+  background-color: #011827;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #021928;
-  color: white;
-  padding: 96px 20px;
+  gap: 2rem;
+  padding: 8rem 3rem;
 }
-.story .story-text {
-  font-family: "Roboto";
+.story-text {
   text-align: center;
+  font-size: 1.8rem;
+  max-width: 40rem;
+  margin: 0;
+
 }
 .story .button-story {
-  margin-top: 20px;
-  margin-bottom: 0;
-  font-size: 24px;
+background-color: transparent;
+  border-radius: 0.4rem;
+  border-width: 0;
   color: #8ACFE5;
-  background-color: transparent;
-  border: 2px solid #8ACFE5;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-family: "Roboto";
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.8em 2.4em;
   text-decoration: none;
+  border: 2px solid #8ACFE5;
 }
 
 .booking {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  font-family: "Roboto";
 }
 .booking .booking-info {
-  padding: 30px 20px 32px;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
 }
 .booking .booking-info .booking-title {
-  font-size: 32px;
+  font-size: 1.9rem;
+  margin: 1.5rem 1rem;
 }
 .booking .booking-info .booking-content {
-  font-size: 24px;
+font-size: 1.3rem;
+  margin: 1rem 1rem;
 }
 .booking .booking-info .button {
-  font-size: 24px;
-  color: black;
-  background-color: #8ACFE5;
-  padding: 10px 20px;
-  width: 308px;
-  height: 66px;
-  border-radius: 6px;
-  font-family: "Roboto";
-  text-decoration: none;
-  border: transparent;
+display: block;
+  background-color: #E3170A;
+  border-radius: 0.4rem;
+  border-width: 0;
+  color: white;
+  font-size: 1.6rem;
   font-weight: bold;
+  padding: 0.8em 2.4em;
+  text-decoration: none;
+  margin: 2rem 1rem 4rem;
 }
 
 @media (min-width: 1024px) {
@@ -399,30 +494,55 @@ img {
     flex-direction: row-reverse;
   }
 }
-.footer * {
-  flex: 33%;
-}
+
 .footer {
-  background-color: #021928;
+  background-color: #011827;
   color: white;
-  display: flex;
-  padding: 140px 120px;
+  padding: 3rem 2rem;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 840px) {
+  .footer {
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 7rem;
+    justify-content: space-between;
+  }
+}
+
+
+.footer-about-title {
+  margin: 0.5rem 0;
+}
+.footer-about-text {
+  margin: 0;
+  max-width: 40rem;
 }
 .footer .about {
-  margin: 10px;
-  flex: 50;
+  margin: 0 0 3rem 0;
+  min-width: 10rem;
 }
-.footer .about h2 {
-  font-size: 16px;
-  margin-top: 0px;
-}
-.footer .about p {
-  font-size: 14px;
-}
+
+
 .footer .sitemap, .footer .follow-us {
   list-style-type: none;
   padding: 0;
+  margin: 0 0 3rem 0;
+  min-width: 10rem;
 }
-.footer .follow-us {
-  font-size: 14px;
+
+.sitemap-item h4 {
+  margin: 0.5rem 0;
+}
+
+.follow-us {
+  margin: 0 0 3rem o;
+  min-width: 10rem;
+
+}
+
+.follow-us-header {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
 }

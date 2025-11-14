@@ -2,10 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const style = document.createElement('style');
 
     const css = `
+            .fullscreen-menu {
+            display: none;
+        }
     @media (max-width: 768px){
+
         .hamburger-menu {
-            position: fixed;
-            top: 16px;
+            position: absolute;
+            top: 2.5rem;
             left: 86%;
             display: flex;
             flex-direction: column;
@@ -117,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .fade.show {
             display: inline;
         }}
-
     `;
 
     style.innerHTML = css;
