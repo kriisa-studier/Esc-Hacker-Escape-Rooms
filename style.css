@@ -34,7 +34,7 @@ img {
   background-position: center;
 }
 .header .company-name {
-  background-image: url(/logo.png);
+  background-image: url(https://github.com/kriisa-studier/Esc-Hacker-Escape-Rooms/blob/main/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   font-weight: 700;
@@ -256,7 +256,7 @@ display: flex;
 }
 
 .review-star-filled {
-background-image: url(/star-full.png);
+background-image: url(https://github.com/kriisa-studier/Esc-Hacker-Escape-Rooms/blob/main/star-full.png);
     list-style-type: none;
   width: 1rem;
   height: 1rem;
@@ -266,7 +266,7 @@ background-image: url(/star-full.png);
 
 
 .popular-challenges .popular-challenges-card .popular-challenges-card-list .popular-challenges-card-list-item .challenge .challenge-name .challenge-review-participants .review .review-star {
-background-image: url(/star-empty.png);
+background-image: url(https://github.com/kriisa-studier/Esc-Hacker-Escape-Rooms/blob/main/star-empty.png);
 }
 
 .review-star {
