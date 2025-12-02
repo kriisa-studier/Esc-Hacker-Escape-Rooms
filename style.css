@@ -3,7 +3,7 @@ body {
   font-family: "Roboto";
   margin: 0;
   font-size: 16px;
-  width: 100%;
+  max-width: 100%;
 }
 @media (min-width: 1024px) {
   body {
@@ -12,7 +12,7 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .header-elements {
@@ -34,20 +34,21 @@ img {
   background-position: center;
 }
 .header .company-name {
-  font-weight: 700;
+  background-image: url(/9096b17d9b644c0fb4a4ddeb82daf9e66c5240c5.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-weight: 700
   font-size: 24px;
-  width: 110px;
   margin: 0;
-  padding-top: 0.3rem;
+  padding-left: 6em;
+  width: 6em;
 }
 @media (min-width: 840px) {
   .header .company-name {
-
-    padding-top: 64px;
-    flex-direction: center;
-    width: 500px;
     font-size: 42px;
-    margin-left: 25px;
+    padding-left: 5em;
+    padding-top: 4rem;
+    width: auto;
   }
 }
 
@@ -98,8 +99,6 @@ display: flex;
   text-decoration: underline;
   border: transparent;
   font-weight: bold;
-  font-size: 1rem;
-
 }
 
 @media (min-width: 840px) {
@@ -132,6 +131,7 @@ display: flex;
 .main-image-and-buttons-section img {
   width: 100%;
   object-fit: cover;
+  max-height: 50vh;
 }
 .main-image-and-buttons-section .button-challenges {
   position: relative;
@@ -212,18 +212,15 @@ display: flex;
 }
 
 .popular-challenges-card-list {
-  padding: 0  1rem;
+  padding: 0 1rem;
   display: flex;
   max-width: 100%;
   overflow-x: scroll;
-}
-
-.popular-challenges .popular-challenges-card .popular-challenges-card-list .popular-challenges-card-list-item {
   list-style-type: none;
 }
 
-@media screen and (min-width: 840px) {
-  
+.popular-challenges .popular-challenges-card .popular-challenges-card-list {
+  list-style-type: none;
 }
 
 .challenge {
@@ -359,7 +356,7 @@ background-image: url(/star-empty.png);
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
-  margin: 1rem 0 3rem;
+  margin: 2rem 0;
 }
 
 .button-challenges {
