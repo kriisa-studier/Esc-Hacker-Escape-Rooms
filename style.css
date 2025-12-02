@@ -34,7 +34,7 @@ img {
   background-position: center;
 }
 .header .company-name {
-  background-image: url(https://github.com/kriisa-studier/Esc-Hacker-Escape-Rooms/blob/main/logo.png);
+  background-image: url(./logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   font-weight: 700;
