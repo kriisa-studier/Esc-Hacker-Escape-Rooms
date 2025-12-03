@@ -24,7 +24,7 @@ img {
 .header {
   margin: 0;
   column-gap: 12px;
-  background-color: #021928;
+  background-color: #011827;
   color: white;
   display: flex;
 }
@@ -61,7 +61,7 @@ img {
 @media (min-width: 840px) {
   .navigation-bar {
     display: block;
-    background-color: #021928;
+    background-color: #011827;
   }
   .navigation-menu {
 display: flex;
