@@ -99,6 +99,7 @@ display: flex;
   text-decoration: underline;
   border: transparent;
   font-weight: bold;
+  font-size: 16px;
 }
 
 @media (min-width: 840px) {
